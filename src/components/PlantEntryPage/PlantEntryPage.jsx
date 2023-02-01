@@ -17,10 +17,35 @@ function PlantEntryPage() {
     const [minimumSpread, setMinimumSpread] = useState(null);
     const [maximumSpread, setMaximumSpread] = useState(null);
     const [plantProperties, setPlantProperties] = useState(null);
+    const dispatch = useDispatch();
+    const history = useHistory();
 
+    //REMEMBER TO CREATE BUTTON!!!!!!!
     const returnHomeButton = () => {
         history.push(`/home/`) 
      }
 
-     
+     const submitForm = (e) => {
+        e.preventDefault();
+
+        dispatch({
+            type: "POST_RESULT",
+            PAYLOAD: {
+                commonName,
+                botanicalName,
+                hardnessZone,
+                leafColors,
+                flowerColors,
+                minimumHeight,
+                maximumHeight,
+                minimumSpread,
+                maximumSpread,
+                plantProperties,
+
+            },
+            history,
+     });
+
+     };
+
 }
