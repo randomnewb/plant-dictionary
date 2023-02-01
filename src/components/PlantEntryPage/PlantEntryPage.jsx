@@ -17,4 +17,10 @@ function PlantEntryPage() {
     const [minimumSpread, setMinimumSpread] = useState(null);
     const [maximumSpread, setMaximumSpread] = useState(null);
     const [plantProperties, setPlantProperties] = useState(null);
+
+    const returnHomeButton = () => {
+        history.push(`/home/`) 
+     }
+
+     
 }
