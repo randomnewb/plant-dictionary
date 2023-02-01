@@ -25,6 +25,7 @@ function PlantEntryPage() {
         history.push(`/home/`) 
      }
 
+     //REMEMBER TO CREATE BUTTON!!!!!!!""
      const submitForm = (e) => {
         e.preventDefault();
 
@@ -47,5 +48,16 @@ function PlantEntryPage() {
      });
 
      };
+
+     return (
+        <div>
+            <Card>
+                <h3>Add A New Plant</h3>
+
+                <form onSubmit={submitForm}>
+                </form>
+            </Card>
+        </div>
+     )
 
 }
